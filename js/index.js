@@ -14,18 +14,23 @@ function errorNA(text) {
 }
 const versionBackgrounds = {
   "1.12.2-u2": "./assets/images/web-edition.jpg",
-  "1.8.8": "./assets/images/1.8-bg.jpg",
-  "1.5.2": "./assets/images/1.5-bg.jpg",
-  "beta-1.3": "./assets/images/beta-bg.jpg"
+  "1.12.2-wasm": "./assets/images/web-edition.jpg",
+
+  "1.8.8-u51": "./assets/images/1.8-bg.jpg",
+  "1.8.8-wasm": "./assets/images/1.8-bg.jpg",
+
+  "1.5.2-sp2.01": "./assets/images/1.5-bg.jpg"
 };
+
 function setGameBackground(version) {
-  console.log("setGameBackground called with:", version);
-
   const bg = document.getElementById("game-bg");
-  console.log("game-bg element:", bg);
+  if (!bg) return;
 
-  const img = versionBackgrounds[version] || "./assets/images/web-edition.jpg";
-  console.log("Background image path:", img);
+  let img = "./assets/images/web-edition.jpg";
+
+  if (version.startsWith("1.8.8")) img = "./assets/images/1.8-bg.jpg";
+  else if (version.startsWith("1.5.2")) img = "./assets/images/1.5-bg.jpg";
+  else if (version.startsWith("1.12.2")) img = "./assets/images/web-edition.jpg";
 
   bg.style.backgroundImage = `url("${img}")`;
 }
@@ -479,5 +484,5 @@ generateprofile(1);
 generategames("./assets/json/base.json");
 generatefaqs();
 generatelaunchers("./assets/json/base.json");
-console.clear();
+
 
