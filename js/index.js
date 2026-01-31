@@ -345,7 +345,6 @@ function webedition(){
     generateprofile(1);
     generategames(launcher);
     generatelaunchers(launcher);
-    document.getElementById('game-bg').style.backgroundImage = 'url(./assets/images/web-edition.jpg)';
     document.getElementById('game-title').src = './assets/images/web-title.png';
     document.getElementById('gameedition').innerHTML = 'EAGLERCRAFT WEB EDITION';
     document.getElementById('header2').style.display = 'none';
@@ -357,7 +356,6 @@ function moddededition(){
     generateprofile(2);
     generategames(launcher);
     generatelaunchers(launcher);
-    document.getElementById('game-bg').style.backgroundImage = 'url(./assets/images/modded-edition.jpg)';
     document.getElementById('game-title').src = './assets/images/modded-title.png';
     document.getElementById('gameedition').innerHTML = 'EAGLERCRAFT MODDED';
     document.getElementById('header5').style.display = 'none';
@@ -369,7 +367,6 @@ function eaglercontrols(){
     generateprofile(3);
     generategames(launcher);
     generatelaunchers(launcher);
-    document.getElementById('game-bg').style.backgroundImage = 'url(./assets/images/controls-edition.jpg)';
     document.getElementById('game-title').src = './assets/images/controls-title.png';
     document.getElementById('gameedition').innerHTML = 'EAGLERCRAFT MOBILE/CONTROLLER';
     document.getElementById('header2').style.display = 'none';
