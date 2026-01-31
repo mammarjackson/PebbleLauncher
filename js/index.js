@@ -12,6 +12,17 @@ function errorNA(text) {
         document.getElementById('errortext').innerHTML = "This feature hasn't been made yet."
     }, 3200);
 }
+const versionBackgrounds = {
+  "1.12.2-u2": "./assets/images/web-edition.jpg",
+  "1.8.8": "./assets/images/1.8-bg.jpg",
+  "1.5.2": "./assets/images/1.5-bg.jpg",
+  "beta-1.3": "./assets/images/beta-bg.jpg"
+};
+function setGameBackground(version) {
+  const bg = document.getElementById("game-bg");
+  const img = versionBackgrounds[version] || "./assets/images/web-edition.jpg";
+  bg.style.backgroundImage = `url("${img}")`;
+}
 
 // Last Played Game Option
 let selectedGame1 = localStorage.getItem("basegame");
