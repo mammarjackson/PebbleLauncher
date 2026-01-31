@@ -57,6 +57,10 @@ function generateprofile(game) {
     document.getElementById('gameversion').innerHTML = selectedGame.version;
     document.getElementById('gameicon').src = selectedGame.icon;
     document.getElementById('playbutton').href = selectedGame.link;
+
+    // ⭐ set background for last played version
+    setGameBackground(selectedGame.version);
+
     }
     if (!modslauncher) {
         localStorage.setItem("modslauncher", "");
@@ -81,6 +85,10 @@ function generategames(path) {
                 document.getElementById('gameversion').innerHTML = game.version;
                 document.getElementById('gameicon').src = game.icon;
                 document.getElementById('playbutton').href = game.link;
+
+                // ⭐ change background when version changes
+                setGameBackground(game.version);
+
                 if (path === "./assets/json/base.json") {selectedGame1 = JSON.stringify(game); localStorage.setItem("basegame", selectedGame1)};
                 if (path === "./assets/json/modded.json") {selectedGame2 = JSON.stringify(game); localStorage.setItem("moddedgame", selectedGame2)};
                 if (path === "./assets/json/assisted.json") {selectedGame3 = JSON.stringify(game); localStorage.setItem("assisted", selectedGame3)};
@@ -469,3 +477,4 @@ generategames("./assets/json/base.json");
 generatefaqs();
 generatelaunchers("./assets/json/base.json");
 console.clear();
+
