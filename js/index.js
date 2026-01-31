@@ -19,8 +19,14 @@ const versionBackgrounds = {
   "beta-1.3": "./assets/images/beta-bg.jpg"
 };
 function setGameBackground(version) {
+  console.log("setGameBackground called with:", version);
+
   const bg = document.getElementById("game-bg");
+  console.log("game-bg element:", bg);
+
   const img = versionBackgrounds[version] || "./assets/images/web-edition.jpg";
+  console.log("Background image path:", img);
+
   bg.style.backgroundImage = `url("${img}")`;
 }
 
