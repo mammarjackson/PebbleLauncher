@@ -642,3 +642,9 @@ hr {
     justify-content: flex-start;
     font-size: 1.1vw;
 }
+#game-bg{
+  background-image: url("./assets/images/web-edition.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
